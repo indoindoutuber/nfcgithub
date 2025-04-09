@@ -519,7 +519,7 @@ class MainActivity : AppCompatActivity() {
             .build()
         */
         val request = Request.Builder()
-            .url("http://jhlovee.duckdns.org:5124/nfc")
+            .url("http://flask.server.com/nfc")
             .post(requestBody)
             .build()
 

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <!-- 기존 TextView 요소들 -->
+
+        <TextView
+            android:id="@+id/nfcStatusText"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/nfc_unknown"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tagIdText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="@string/lbl_tag_id_text"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/locationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="위치: " />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/timestampTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="시간: " />
+
+
+            <TextView
+                android:id="@+id/selectedHoleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="선택된 홀: 없음"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/httpTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="전송: " />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical">
+
+            <!-- 1홀 ~ 9홀 라디오 버튼 -->
+            <RadioGroup
+                android:id="@+id/holeRadioGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- RadioButtons 1~9 -->
+                <RadioButton
+                    android:id="@+id/hole1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1" />
+
+                <RadioButton
+                    android:id="@+id/hole2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2" />
+
+                <RadioButton
+                    android:id="@+id/hole3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="3" />
+
+                <RadioButton
+                    android:id="@+id/hole4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="4" />
+
+                <RadioButton
+                    android:id="@+id/hole5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="5" />
+
+                <RadioButton
+                    android:id="@+id/hole6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="6" />
+
+                <RadioButton
+                    android:id="@+id/hole7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="7" />
+
+                <RadioButton
+                    android:id="@+id/hole8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="8" />
+
+                <RadioButton
+                    android:id="@+id/hole9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="9" />
+            </RadioGroup>
+
+            <!-- 10홀 ~ 18홀 라디오 버튼 -->
+            <RadioGroup
+                android:id="@+id/holeRadioGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal">
+
+                <!-- RadioButtons 10~18 -->
+                <RadioButton
+                    android:id="@+id/hole10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="10" />
+
+                <RadioButton
+                    android:id="@+id/hole11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="11" />
+
+                <RadioButton
+                    android:id="@+id/hole12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="12" />
+
+                <RadioButton
+                    android:id="@+id/hole13"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="13" />
+
+                <RadioButton
+                    android:id="@+id/hole14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="14" />
+
+                <RadioButton
+                    android:id="@+id/hole15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="15" />
+
+                <RadioButton
+                    android:id="@+id/hole16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="16" />
+
+                <RadioButton
+                    android:id="@+id/hole17"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="17" />
+
+                <RadioButton
+                    android:id="@+id/hole18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="18" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- 11x3 버튼 그리드 추가 -->
+        <GridLayout
+            android:id="@+id/numberGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:columnCount="3"
+            android:padding="2dp"
+            android:rowCount="11">
+
+            <!-- 버튼 10부터 0까지, 각 숫자당 3개 버튼 -->
+            <Button android:id="@+id/btn_0_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="0" />
+            <Button android:id="@+id/btn_9_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="9" />
+            <Button android:id="@+id/btn_9_3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="9" />
+
+            <Button android:id="@+id/btn_1_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="1" />
+            <Button android:id="@+id/btn_8_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="8" />
+            <Button android:id="@+id/btn_8_3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="8" />
+
+            <Button android:id="@+id/btn_2_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="2" />
+            <Button android:id="@+id/btn_7_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="7" />
+            <Button android:id="@+id/btn_7_3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="7" />
+
+            <Button android:id="@+id/btn_3_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="3" />
+            <Button android:id="@+id/btn_6_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="6" />
+            <Button android:id="@+id/btn_6_3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="6" />
+
+            <Button android:id="@+id/btn_6_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="6" />
+            <Button android:id="@+id/btn_5_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="5" />
+            <Button android:id="@+id/btn_5_3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="5" />
+
+            <Button android:id="@+id/btn_5_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="5" />
+            <Button android:id="@+id/btn_4_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="4" />
+            <Button android:id="@+id/btn_4_3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="4" />
+
+            <Button android:id="@+id/btn_4_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="4" />
+            <Button android:id="@+id/btn_3_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="3" />
+            <Button android:id="@+id/btn_3_3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="3" />
+
+            <Button android:id="@+id/btn_7_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="7" />
+            <Button android:id="@+id/btn_2_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="2" />
+            <Button android:id="@+id/btn_2_3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="2" />
+
+            <Button android:id="@+id/btn_8_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="8" />
+            <Button android:id="@+id/btn_1_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="1" />
+            <Button android:id="@+id/btn_1_3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="1" />
+
+            <Button android:id="@+id/btn_9_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="9" />
+            <Button android:id="@+id/btn_0_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="0" />
+            <Button android:id="@+id/btn_0_3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="0" />
+
+            <!--
+            <Button android:id="@+id/btn_0_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="0" />
+            <Button android:id="@+id/btn_0_3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:text="0" />
+             -->
+        </GridLayout>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

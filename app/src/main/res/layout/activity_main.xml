@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 상단 녹색 정보 박스 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#287C6A"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/nfcStatusText"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/nfc_unknown"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="위치 : 35.1234, 128.4355"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/timestampTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간 : 2025-04-05 13:00:00"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tagIdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="클럽 : W1"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/holeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="홀 : "
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/httpTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="응답 : 200 OK blahblah"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="#C6F779"
+            android:orientation="vertical">
+
+            <!-- 1홀 ~ 9홀 라디오 버튼 -->
+            <RadioGroup
+                android:id="@+id/holeRadioGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- RadioButtons 1~9 -->
+                <RadioButton
+                    android:id="@+id/hole1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1" />
+
+                <RadioButton
+                    android:id="@+id/hole2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2" />
+
+                <RadioButton
+                    android:id="@+id/hole3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="3" />
+
+                <RadioButton
+                    android:id="@+id/hole4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="4" />
+
+                <RadioButton
+                    android:id="@+id/hole5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="5" />
+
+                <RadioButton
+                    android:id="@+id/hole6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="6" />
+
+                <RadioButton
+                    android:id="@+id/hole7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="7" />
+
+                <RadioButton
+                    android:id="@+id/hole8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="8" />
+
+                <RadioButton
+                    android:id="@+id/hole9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="9" />
+            </RadioGroup>
+
+            <!-- 10홀 ~ 18홀 라디오 버튼 -->
+            <RadioGroup
+                android:id="@+id/holeRadioGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal">
+
+                <!-- RadioButtons 10~18 -->
+                <RadioButton
+                    android:id="@+id/hole10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="10" />
+
+                <RadioButton
+                    android:id="@+id/hole11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="11" />
+
+                <RadioButton
+                    android:id="@+id/hole12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="12" />
+
+                <RadioButton
+                    android:id="@+id/hole13"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="13" />
+
+                <RadioButton
+                    android:id="@+id/hole14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="14" />
+
+                <RadioButton
+                    android:id="@+id/hole15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="15" />
+
+                <RadioButton
+                    android:id="@+id/hole16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="16" />
+
+                <RadioButton
+                    android:id="@+id/hole17"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="17" />
+
+                <RadioButton
+                    android:id="@+id/hole18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="18" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <!-- 중앙 라디오 버튼 (9x2)
+        <GridLayout
+            android:id="@+id/radioGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="9"
+            android:background="#C6F779"
+            android:padding="2dp"
+            android:layout_marginBottom="3dp">
+
+
+            <RadioButton android:id="@+id/radio1" android:text="1"/>
+            <RadioButton android:id="@+id/radio2" android:text="2"/>
+            <RadioButton android:id="@+id/radio3" android:text="3"/>
+            <RadioButton android:id="@+id/radio4" android:text="4"/>
+            <RadioButton android:id="@+id/radio5" android:text="5"/>
+            <RadioButton android:id="@+id/radio6" android:text="6"/>
+            <RadioButton android:id="@+id/radio7" android:text="7"/>
+            <RadioButton android:id="@+id/radio8" android:text="8"/>
+            <RadioButton android:id="@+id/radio9" android:text="9"/>
+            <RadioButton android:id="@+id/radio10" android:text="10"/>
+            <RadioButton android:id="@+id/radio11" android:text="11"/>
+            <RadioButton android:id="@+id/radio12" android:text="12"/>
+            <RadioButton android:id="@+id/radio13" android:text="13"/>
+            <RadioButton android:id="@+id/radio14" android:text="14"/>
+            <RadioButton android:id="@+id/radio15" android:text="15"/>
+            <RadioButton android:id="@+id/radio16" android:text="16"/>
+            <RadioButton android:id="@+id/radio17" android:text="17"/>
+            <RadioButton android:id="@+id/radio18" android:text="18"/>
+        </GridLayout>
+        -->
+
+        <!-- 하단 숫자 키패드 (3열: 100, 10, 1 자리) -->
+        <GridLayout
+            android:id="@+id/numberGrid"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:columnCount="3"
+            android:background="#DDDDDD"
+            android:padding="12dp">
+
+            <!-- 0 -->
+            <Button android:id="@+id/h100_0" android:text="0" android:background="#3A6FE5" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h10_0" android:text="0" android:background="#32C858" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h1_0" android:text="0" android:background="#FFA500" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+
+            <!-- 1 -->
+            <Button android:id="@+id/h100_1" android:text="1" android:background="#3A6FE5" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h10_1" android:text="1" android:background="#32C858" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h1_1" android:text="1" android:background="#FFA500" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+
+            <!-- 2 -->
+            <Button android:id="@+id/h100_2" android:text="2" android:background="#3A6FE5" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h10_2" android:text="2" android:background="#32C858" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h1_2" android:text="2" android:background="#FFA500" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+
+            <!-- 3 -->
+            <Button android:id="@+id/h100_3" android:text="3" android:background="#3A6FE5" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h10_3" android:text="3" android:background="#32C858" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h1_3" android:text="3" android:background="#FFA500" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+
+            <!-- 4 -->
+            <Button android:id="@+id/h100_4" android:text="4" android:background="#3A6FE5" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h10_4" android:text="4" android:background="#32C858" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h1_4" android:text="4" android:background="#FFA500" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+
+            <!-- 5 -->
+            <Button android:id="@+id/h100_5" android:text="5" android:background="#3A6FE5" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h10_5" android:text="5" android:background="#32C858" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h1_5" android:text="5" android:background="#FFA500" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+
+            <!-- 6 -->
+            <Button android:id="@+id/h100_6" android:text="6" android:background="#3A6FE5" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h10_6" android:text="6" android:background="#32C858" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h1_6" android:text="6" android:background="#FFA500" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+
+            <!-- 7 -->
+            <Button android:id="@+id/h100_7" android:text="7" android:background="#3A6FE5" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h10_7" android:text="7" android:background="#32C858" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h1_7" android:text="7" android:background="#FFA500" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+
+            <!-- 8 -->
+            <Button android:id="@+id/h100_8" android:text="8" android:background="#3A6FE5" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h10_8" android:text="8" android:background="#32C858" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h1_8" android:text="8" android:background="#FFA500" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+
+            <!-- 9 -->
+            <Button android:id="@+id/h100_9" android:text="9" android:background="#3A6FE5" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h10_9" android:text="9" android:background="#32C858" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+            <Button android:id="@+id/h1_9" android:text="9" android:background="#FFA500" android:textColor="#FFFFFF"
+                android:layout_width="0dp" android:layout_columnWeight="1"
+                android:layout_height="0dp" android:layout_rowWeight="1"
+                android:layout_margin="1dp"/>
+        </GridLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>

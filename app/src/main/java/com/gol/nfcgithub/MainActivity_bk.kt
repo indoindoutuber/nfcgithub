@@ -406,7 +406,7 @@ class MainActivity_bk : AppCompatActivity() {
             .build()
         */
         val request = Request.Builder()
-            .url("http://jhlovee.duckdns.org:5124/nfc")
+            .url("http://server.com/nfc")
             .post(requestBody)
             .build()
 

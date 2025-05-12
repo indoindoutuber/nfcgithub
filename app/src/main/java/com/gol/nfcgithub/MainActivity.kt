@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
     private val selectedButtons = mutableMapOf<Int, Button>()
     private val selectedNumbers = mutableMapOf<Int, Int>() // 열 번호 -> 숫자 저장
 
+
     private var distance: String = "0"
 
     private var selectedHundreds = 0
@@ -73,6 +74,7 @@ class MainActivity : AppCompatActivity() {
         private const val LOCATION_PERMISSION_REQUEST_CODE = 1000
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -171,6 +173,35 @@ class MainActivity : AppCompatActivity() {
 
         // 위치 권한 확인 및 요청
         checkAndRequestLocationPermission()
+
+        val sendButton = findViewById<Button>(R.id.send)
+        sendButton.setOnClickListener {
+            // 버튼 눌렀을 때 실행할 코드
+            // 앱이 포그라운드에 있을 때
+            var _data = "HOLECUP"
+            if (isAppInForeground()) {
+                // UI 업데이트
+                updateUI(_data, hole)
+                //Toast.makeText(this, "Fore " + data, Toast.LENGTH_LONG).show()
+            } else {
+                // 백그라운드에서 처리
+                showToastInBackground(_data)
+            }
+            val location = getLocation()
+            locationTextView.text = "위치: ${location.first}, ${location.second}"
+            val timestamp = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+            } else {
+                TODO("VERSION.SDK_INT < O")
+            }
+            Log.d("TIME_LOG", "현재 시간: $timestamp")
+            timestampTextView.text = "시간: $timestamp"
+
+            sendHttpPost(_data, hole, location, "0", timestamp)
+
+            Toast.makeText(this, "Send 버튼이 눌렸습니다", Toast.LENGTH_SHORT).show()
+
+        }
 
         /*
         // 100의 자리 버튼 등록
@@ -418,7 +449,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("TIME_LOG", "현재 시간: $timestamp")
         timestampTextView.text = "시간: $timestamp"
 
-        sendHttpPost(data,hole, location, distance, timestamp)
+        sendHttpPost(data, hole, location, distance, timestamp)
     }
 
     private fun isAppInForeground(): Boolean {
@@ -519,7 +550,7 @@ class MainActivity : AppCompatActivity() {
             .build()
         */
         val request = Request.Builder()
-            .url("http://flask.server.com/nfc")
+            .url("http://a.duckdns.org:1234/nfc")
             .post(requestBody)
             .build()
 
